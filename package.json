@@ -1,0 +1,21 @@
+{
+  "name": "purchase-requisition-system",
+  "version": "1.0.0",
+  "description": "Google Apps Script Purchase Request System bound to a Google Sheet with Form submissions",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "push": "npm run build && clasp push",
+    "pull": "clasp pull",
+    "create": "clasp create --type sheets --title 'Purchase Requisition System'",
+    "logs": "clasp logs --watch",
+    "open": "clasp open",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@google/clasp": "^2.4.2",
+    "@types/google-apps-script": "^1.0.83",
+    "typescript": "^5.3.3"
+  },
+  "license": "MIT"
+}

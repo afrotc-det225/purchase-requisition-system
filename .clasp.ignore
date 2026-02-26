@@ -1,0 +1,10 @@
+node_modules/**
+src/**
+.vscode/**
+.git/**
+.github/**
+*.md
+*.log
+.env*
+package*.json
+tsconfig.json
