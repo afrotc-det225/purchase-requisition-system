@@ -5,17 +5,30 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "push": "npm run build && clasp push",
-    "pull": "clasp pull",
-    "create": "clasp create --type sheets --title 'Purchase Requisition System'",
+    "create": "clasp create --title \"Purchase Requisition System\" --type sheets --rootDir dist",
+    "push": "npm run build && cp appsscript.json dist/appsscript.json && clasp push",
+    "pull": "clasp pull && cp dist/appsscript.json appsscript.json",
+    "status": "clasp status",
     "logs": "clasp logs --watch",
     "open": "clasp open",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "upgrade": "npx npm-check-updates -u"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afrotc-det225/purchase-requisition-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/afrotc-det225/purchase-requisition-system/issues"
+  },
+  "homepage": "https://github.com/afrotc-det225/purchase-requisition-system#readme",
   "devDependencies": {
-    "@google/clasp": "^2.4.2",
-    "@types/google-apps-script": "^1.0.83",
-    "typescript": "^5.3.3"
-  },
-  "license": "MIT"
+    "@types/google-apps-script": "^2.0.8",
+    "npm-check-updates": "^19.3.1",
+    "typescript": "^5.9.3"
+  }
 }
